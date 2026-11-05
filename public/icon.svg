@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020816" />
+      <stop offset="50%" stop-color="#051229" />
+      <stop offset="100%" stop-color="#020713" />
+    </linearGradient>
+
+    <!-- Outer Ambient Glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0088FF" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#0044AA" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Speed Swoosh Gradient -->
+    <linearGradient id="swooshGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="30%" stop-color="#00D0FF" />
+      <stop offset="70%" stop-color="#0080FF" />
+      <stop offset="100%" stop-color="#0055EE" />
+    </linearGradient>
+
+    <!-- White Accent Wedge Gradient -->
+    <linearGradient id="whiteAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#D9EEF9" />
+    </linearGradient>
+
+    <!-- Globe Gradient -->
+    <radialGradient id="globeGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#00A8FF" />
+      <stop offset="60%" stop-color="#0050C8" />
+      <stop offset="100%" stop-color="#002570" />
+    </radialGradient>
+
+    <!-- Globe Ring Gradient -->
+    <linearGradient id="globeRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+
+    <!-- Text Dash Gradient -->
+    <linearGradient id="textDashGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow for Elements -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+    <filter id="cyanGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Icon Squircle with Inner Shadow & Border -->
+  <rect x="16" y="16" width="480" height="480" rx="105" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="105" fill="url(#ambientGlow)" />
+  <rect x="16" y="16" width="480" height="480" rx="105" fill="none" stroke="#0088FF" stroke-width="2.5" stroke-opacity="0.4" />
+
+  <!-- Dynamic Speed Swoosh Elements (The stylized "D" Routine Motion) -->
+  <g filter="url(#softShadow)">
+    
+    <!-- Top Speed Line & Large Outer Loop -->
+    <path d="M 160 96 
+             L 320 96 
+             A 96 96 0 0 1 416 192 
+             A 96 96 0 0 1 385 260 
+             L 260 410 
+             A 12 12 0 0 1 245 400 
+             L 360 262 
+             A 72 72 0 0 0 320 120 
+             L 160 120 
+             A 12 12 0 0 1 160 96 Z" 
+          fill="url(#swooshGrad)" />
+
+    <!-- Middle Speed Line & Mid Loop -->
+    <path d="M 130 148 
+             L 305 148 
+             A 58 58 0 0 1 363 206 
+             A 58 58 0 0 1 346 248 
+             L 272 336 
+             A 11 11 0 0 1 258 327 
+             L 326 245 
+             A 36 36 0 0 0 305 172 
+             L 130 172 
+             A 12 12 0 0 1 130 148 Z" 
+          fill="url(#swooshGrad)" />
+
+    <!-- Bottom Short Speed Bar -->
+    <rect x="156" y="196" width="138" height="24" rx="12" fill="url(#swooshGrad)" />
+
+    <!-- Bottom Right White Aerodynamic Accent -->
+    <path d="M 296 392 
+             C 336 384 368 360 382 328 
+             C 362 380 320 406 296 392 Z" 
+          fill="url(#whiteAccent)" filter="url(#softShadow)" />
+
+    <!-- Central-Left Globe Badge with Outer Neon Ring -->
+    <!-- Outer Glow Ring -->
+    <circle cx="192" cy="316" r="62" fill="none" stroke="url(#globeRingGrad)" stroke-width="12" />
+    
+    <!-- Inner Globe Sphere -->
+    <circle cx="192" cy="316" r="54" fill="url(#globeGrad)" />
+    
+    <!-- Continents Pattern (stylized Earth landmasses) -->
+    <g fill="#001844" opacity="0.65">
+      <!-- Europe & Africa -->
+      <path d="M 185 272 C 195 276 200 285 198 295 C 196 305 204 315 202 328 C 200 340 188 355 180 358 C 176 348 180 338 178 328 C 175 315 180 300 176 290 Z" />
+      <!-- Americas -->
+      <path d="M 152 284 C 160 286 166 296 162 306 C 158 314 162 325 158 338 C 152 344 146 338 148 328 C 150 316 144 306 148 295 Z" />
+      <!-- Asia / Edge -->
+      <path d="M 222 282 C 230 288 238 296 236 308 C 232 316 238 326 234 336 C 228 340 224 332 226 322 Z" />
+    </g>
+
+    <!-- Crisp White Central Checkmark (Chore Done / Achievement) -->
+    <path d="M 166 314 
+             L 184 332 
+             A 3 3 0 0 0 188 332 
+             L 216 298 
+             A 3 3 0 0 1 221 298 
+             L 226 302 
+             A 3 3 0 0 1 226 307 
+             L 190 350 
+             A 3 3 0 0 1 185 350 
+             L 158 322 
+             A 3 3 0 0 1 158 317 
+             L 162 313 
+             A 3 3 0 0 1 166 314 Z" 
+          fill="#FFFFFF" 
+          filter="url(#softShadow)" />
+
+  </g>
+
+  <!-- Subtle bottom edge highlight on squircle -->
+  <path d="M 120 488 L 392 488" stroke="#00AAFF" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round" />
+</svg>

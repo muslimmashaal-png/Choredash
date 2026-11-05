@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020816" />
+      <stop offset="50%" stop-color="#05132B" />
+      <stop offset="100%" stop-color="#020713" />
+    </linearGradient>
+
+    <!-- Outer Ambient Glow -->
+    <radialGradient id="ambientGlowFull" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#0088FF" stop-opacity="0.4" />
+      <stop offset="55%" stop-color="#0044AA" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Speed Swoosh Gradient -->
+    <linearGradient id="swooshGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="35%" stop-color="#00D0FF" />
+      <stop offset="70%" stop-color="#0080FF" />
+      <stop offset="100%" stop-color="#0055EE" />
+    </linearGradient>
+
+    <!-- White Accent Wedge Gradient -->
+    <linearGradient id="whiteAccentFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#D9EEF9" />
+    </linearGradient>
+
+    <!-- Globe Gradient -->
+    <radialGradient id="globeGradFull" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#00A8FF" />
+      <stop offset="60%" stop-color="#0050C8" />
+      <stop offset="100%" stop-color="#002570" />
+    </radialGradient>
+
+    <!-- Globe Ring Gradient -->
+    <linearGradient id="globeRingGradFull" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+
+    <!-- Text Dash Gradient -->
+    <linearGradient id="textDashGradFull" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#0072FF" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow for Elements -->
+    <filter id="shadowFull" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Base Icon Squircle with Inner Shadow & Border -->
+  <rect x="24" y="24" width="552" height="552" rx="120" fill="url(#bgGradFull)" />
+  <rect x="24" y="24" width="552" height="552" rx="120" fill="url(#ambientGlowFull)" />
+  <rect x="24" y="24" width="552" height="552" rx="120" fill="none" stroke="#0088FF" stroke-width="2.5" stroke-opacity="0.45" />
+
+  <!-- Dynamic Speed Swoosh Elements (The stylized "D" Routine Motion) -->
+  <g transform="translate(18, -10)" filter="url(#shadowFull)">
+    
+    <!-- Top Speed Line & Large Outer Loop -->
+    <path d="M 170 100 
+             L 340 100 
+             A 102 102 0 0 1 442 202 
+             A 102 102 0 0 1 408 276 
+             L 276 430 
+             A 13 13 0 0 1 260 420 
+             L 384 276 
+             A 76 76 0 0 0 340 126 
+             L 170 126 
+             A 13 13 0 0 1 170 100 Z" 
+          fill="url(#swooshGradFull)" />
+
+    <!-- Middle Speed Line & Mid Loop -->
+    <path d="M 138 156 
+             L 324 156 
+             A 62 62 0 0 1 386 218 
+             A 62 62 0 0 1 368 262 
+             L 290 354 
+             A 12 12 0 0 1 275 344 
+             L 347 259 
+             A 38 38 0 0 0 324 182 
+             L 138 182 
+             A 13 13 0 0 1 138 156 Z" 
+          fill="url(#swooshGradFull)" />
+
+    <!-- Bottom Short Speed Bar -->
+    <rect x="166" y="206" width="146" height="26" rx="13" fill="url(#swooshGradFull)" />
+
+    <!-- Bottom Right White Aerodynamic Accent -->
+    <path d="M 314 412 
+             C 356 404 390 378 405 344 
+             C 384 399 340 426 314 412 Z" 
+          fill="url(#whiteAccentFull)" filter="url(#shadowFull)" />
+
+    <!-- Central-Left Globe Badge with Outer Neon Ring -->
+    <circle cx="204" cy="332" r="66" fill="none" stroke="url(#globeRingGradFull)" stroke-width="13" />
+    <circle cx="204" cy="332" r="57" fill="url(#globeGradFull)" />
+    
+    <!-- Continents Pattern -->
+    <g fill="#001844" opacity="0.65">
+      <path d="M 197 285 C 208 289 213 299 211 310 C 209 320 217 331 215 345 C 213 358 200 374 191 377 C 187 366 191 355 189 345 C 186 331 191 315 187 304 Z" />
+      <path d="M 161 298 C 170 300 176 311 172 322 C 168 330 172 342 168 356 C 161 362 155 356 157 345 C 159 332 153 322 157 310 Z" />
+      <path d="M 236 296 C 244 302 253 311 251 324 C 247 332 253 343 249 353 C 242 357 238 349 240 338 Z" />
+    </g>
+
+    <!-- Crisp White Central Checkmark -->
+    <path d="M 176 330 
+             L 196 350 
+             A 4 4 0 0 0 201 350 
+             L 235 311 
+             A 4 4 0 0 1 241 311 
+             L 246 316 
+             A 4 4 0 0 1 246 322 
+             L 203 369 
+             A 4 4 0 0 1 197 369 
+             L 168 339 
+             A 4 4 0 0 1 168 333 
+             L 172 329 
+             A 4 4 0 0 1 176 330 Z" 
+          fill="#FFFFFF" 
+          filter="url(#shadowFull)" />
+
+  </g>
+
+  <!-- ChoreDash Wordmark Typography -->
+  <!-- "Chore" in bold pure white with soft 3D shadow -->
+  <text x="74" y="492" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="78" font-weight="800" letter-spacing="-1" fill="#FFFFFF" filter="url(#shadowFull)">Chore</text>
+
+  <!-- "Dash" in vibrant cyan-to-electric-blue gradient -->
+  <text x="322" y="492" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="78" font-weight="800" letter-spacing="-1" fill="url(#textDashGradFull)" filter="url(#shadowFull)">Dash</text>
+
+  <!-- Subtle bottom edge highlight on squircle -->
+  <path d="M 140 574 L 460 574" stroke="#00AAFF" stroke-width="2" stroke-opacity="0.35" stroke-linecap="round" />
+</svg>

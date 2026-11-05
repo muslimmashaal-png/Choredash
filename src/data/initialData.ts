@@ -1,0 +1,257 @@
+import { HomeworkTask, RewardGoal, DailyChallenge, ActivityFeedItem, StudentProfile, ParentProfile, PointTransaction } from '../types';
+
+export const initialStudent: StudentProfile = {
+  id: 'jamie',
+  name: 'Jamie Morgan',
+  grade: 'Year 7',
+  school: 'Woodrow Heath High School',
+  familyCode: 'JAM-482',
+  points: 185,
+  avatarBg: 'bg-emerald-600',
+  streakDays: 4,
+};
+
+export const initialParent: ParentProfile = {
+  name: 'Alex Morgan',
+  role: 'Parent / carer',
+  email: 'alex.morgan@familydash.com',
+  avatarBg: 'bg-orange-500',
+};
+
+export const initialTasks: HomeworkTask[] = [
+  {
+    id: 'task-1',
+    title: 'Fractions worksheet — questions 1–12',
+    subject: 'Maths',
+    category: 'Worksheet',
+    instructions: 'Show your working for each answer. Use the example on page 32 if you get stuck.',
+    dueDate: '2026-10-01',
+    dueTime: '16:00',
+    dueDisplay: 'Today, 4:00 PM',
+    repeats: 'Every Thursday',
+    repeatEndDate: '2026-12-17',
+    status: 'in_progress',
+    points: 15,
+    assignedChildId: 'jamie',
+    durationMinutes: 25,
+    totalQuestions: 12,
+    completedQuestions: 1,
+    attachments: [
+      {
+        id: 'att-1',
+        name: 'Fractions-week-4.pdf',
+        size: '1.8 MB',
+        type: 'pdf',
+      },
+    ],
+    reminders: [
+      { id: 'rem-1', label: '1 day before at 9:00 AM', enabled: true },
+      { id: 'rem-2', label: '2 hours before', enabled: true },
+    ],
+    comments: [
+      {
+        id: 'com-1',
+        author: 'Mum',
+        role: 'Parent',
+        time: '11:15 AM',
+        text: "You're halfway there — send me a photo if you need help checking question 8.",
+        avatarColor: 'bg-orange-500',
+      },
+    ],
+  },
+  {
+    id: 'task-2',
+    title: 'Label the parts of a plant cell',
+    subject: 'Science',
+    category: 'Worksheet',
+    instructions: 'Label cell membrane, nucleus, cytoplasm, and chloroplasts. Add neat coloration to each organelle.',
+    dueDate: '2026-10-01',
+    dueTime: '16:30',
+    dueDisplay: 'Today, 4:30 PM',
+    repeats: 'Does not repeat',
+    status: 'not_started',
+    points: 20,
+    assignedChildId: 'jamie',
+    durationMinutes: 20,
+    totalQuestions: 4,
+    completedQuestions: 0,
+    attachments: [],
+    reminders: [
+      { id: 'rem-3', label: '1 hour before', enabled: true },
+    ],
+    comments: [
+      {
+        id: 'com-2',
+        author: 'Jamie',
+        role: 'Student',
+        time: '32 mins ago',
+        text: 'Do I need sketch labelling too?',
+        avatarColor: 'bg-emerald-600',
+      },
+    ],
+  },
+  {
+    id: 'task-3',
+    title: 'Book report chapter three',
+    subject: 'English',
+    category: 'Essay',
+    instructions: 'Write a 300-word paragraph detailing protagonist motives and the turning point in chapter 3.',
+    dueDate: '2026-09-30',
+    dueTime: '17:00',
+    dueDisplay: 'Yesterday, 5:00 PM',
+    repeats: 'Does not repeat',
+    status: 'overdue',
+    points: 25,
+    assignedChildId: 'jamie',
+    durationMinutes: 30,
+    totalQuestions: 1,
+    completedQuestions: 0,
+    attachments: [],
+    reminders: [
+      { id: 'rem-4', label: 'Morning of due date', enabled: true },
+    ],
+    comments: [],
+  },
+];
+
+export const initialRewards: RewardGoal[] = [
+  {
+    id: 'rew-1',
+    title: 'Family movie night & popcorn',
+    pointsNeeded: 250,
+    currentPoints: 185,
+    icon: 'film',
+    imageUrl: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=600&q=80',
+    description: 'Pick any film on Friday night + cinema popcorn & sweet treats',
+    status: 'in_progress',
+    category: 'Experience',
+  },
+  {
+    id: 'rew-2',
+    title: 'Nintendo Switch gaming hour',
+    pointsNeeded: 300,
+    currentPoints: 185,
+    icon: 'gamepad-2',
+    imageUrl: 'https://images.unsplash.com/photo-1612287233207-6b45155f9a94?auto=format&fit=crop&w=600&q=80',
+    description: '60 minutes uninterrupted play on your favourite game',
+    status: 'locked',
+    category: 'Privilege',
+  },
+  {
+    id: 'rew-3',
+    title: 'Pick Friday dinner takeaway',
+    pointsNeeded: 150,
+    currentPoints: 185,
+    icon: 'utensils',
+    imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
+    description: 'Order whatever takeaway you crave for the whole family',
+    status: 'unlocked',
+    category: 'Experience',
+  },
+  {
+    id: 'rew-4',
+    title: 'LEGO Creator building set',
+    pointsNeeded: 350,
+    currentPoints: 185,
+    icon: 'gift',
+    imageUrl: 'https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?auto=format&fit=crop&w=600&q=80',
+    description: 'New LEGO construction set of your choice under £25',
+    status: 'locked',
+    category: 'Prizes',
+  },
+  {
+    id: 'rew-5',
+    title: 'Artisan ice cream sundae outing',
+    pointsNeeded: 100,
+    currentPoints: 185,
+    icon: 'star',
+    imageUrl: 'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?auto=format&fit=crop&w=600&q=80',
+    description: 'Double scoop sundae with waffle cone & rainbow sprinkles',
+    status: 'unlocked',
+    category: 'Experience',
+  },
+];
+
+export const initialPointTransactions: PointTransaction[] = [
+  {
+    id: 'tx-1',
+    amount: 15,
+    reason: 'Fractions worksheet completed with workings',
+    date: 'Today',
+    time: '3:45 PM',
+    type: 'task_completion',
+  },
+  {
+    id: 'tx-2',
+    amount: 25,
+    reason: 'Weekly room tidy & backpack organized',
+    date: 'Yesterday',
+    time: '5:30 PM',
+    type: 'bonus',
+  },
+  {
+    id: 'tx-3',
+    amount: 30,
+    reason: 'Weekly positive habits allowance',
+    date: 'Mon, 28 Sep',
+    time: '9:00 AM',
+    type: 'allowance',
+  },
+  {
+    id: 'tx-4',
+    amount: 10,
+    reason: 'Helped clear dinner table without reminder',
+    date: 'Mon, 28 Sep',
+    time: '7:15 PM',
+    type: 'bonus',
+  },
+];
+
+export const initialChallenges: DailyChallenge[] = [
+  {
+    id: 'chal-1',
+    title: 'Homework hero challenge',
+    description: 'Complete 3 tasks before 5 PM',
+    bonusPoints: 20,
+    progress: 2,
+    total: 3,
+    completed: false,
+  },
+];
+
+export const initialActivity: ActivityFeedItem[] = [
+  {
+    id: 'act-1',
+    text: "Jamie marked 'Reading log' complete",
+    highlightText: "'Reading log'",
+    timeAgo: '15 mins ago',
+    timestamp: '2026-10-01T15:45:00Z',
+    type: 'completed',
+  },
+  {
+    id: 'act-2',
+    text: "Jamie commented on Science — 'Do I need sketch labelling too?'",
+    highlightText: 'Science',
+    timeAgo: '32 mins ago',
+    timestamp: '2026-10-01T15:28:00Z',
+    type: 'comment',
+  },
+  {
+    id: 'act-3',
+    text: "Alex assigned 'Fractions worksheet — questions 1–12'",
+    highlightText: "'Fractions worksheet'",
+    timeAgo: '2 hours ago',
+    timestamp: '2026-10-01T14:00:00Z',
+    type: 'created',
+  },
+];
+
+export const weeklyRhythmData = [
+  { day: 'Mon', completed: 3, due: 3, heightPctCompleted: 75, heightPctDue: 85 },
+  { day: 'Tue', completed: 2, due: 3, heightPctCompleted: 50, heightPctDue: 75 },
+  { day: 'Wed', completed: 4, due: 4, heightPctCompleted: 90, heightPctDue: 90 },
+  { day: 'Thu', completed: 2, due: 4, heightPctCompleted: 50, heightPctDue: 95 },
+  { day: 'Fri', completed: 3, due: 3, heightPctCompleted: 70, heightPctDue: 70 },
+  { day: 'Sat', completed: 1, due: 1, heightPctCompleted: 30, heightPctDue: 35 },
+  { day: 'Sun', completed: 1, due: 2, heightPctCompleted: 25, heightPctDue: 45 },
+];

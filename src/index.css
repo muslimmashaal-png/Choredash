@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    
+    /* Logo Brand Neon Palette */
+    --neon-cyan: #00F0FF;
+    --neon-sky: #00D0FF;
+    --neon-blue: #0080FF;
+    --neon-ultramarine: #0055EE;
+    --neon-navy: #020816;
+    --neon-navy-mid: #05132B;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #020816;
+    color: #1E293B;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  /* Prevent browser number stepper arrows from clipping numbers */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Neon Glow & Logo Color Utility Classes */
+.neon-glow-cyan {
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.45), inset 0 0 10px rgba(0, 240, 255, 0.15);
+}
+
+.neon-glow-cyan-sm {
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.35);
+}
+
+.neon-glow-blue {
+  box-shadow: 0 0 18px rgba(0, 102, 255, 0.45);
+}
+
+.neon-border-cyan {
+  border-color: rgba(0, 240, 255, 0.55);
+}
+
+.neon-border-glow {
+  border-color: rgba(0, 240, 255, 0.6);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+}
+
+.neon-gradient-logo {
+  background: linear-gradient(135deg, #00F0FF 0%, #00D0FF 30%, #0080FF 70%, #0055EE 100%);
+}
+
+.neon-gradient-logo-hover:hover {
+  background: linear-gradient(135deg, #33F5FF 0%, #1AD6FF 30%, #1A8DFF 70%, #1A66FF 100%);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+}
+
+.neon-gradient-card {
+  background: linear-gradient(145deg, #05132B 0%, #030A1A 60%, #020713 100%);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+}
+
+/* Custom scrollbar for clean dashboard & mobile mockups */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ChoreDash - Family Homework & Routine Tracker",
+  "description": "Calm, collaborative homework and chore tracker for parents, carers, and students with real-time sync, points, and rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

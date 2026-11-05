@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "ChoreDash - Family Homework Tracker",
+  "short_name": "ChoreDash",
+  "description": "Calm, collaborative homework and chore tracker for parents, carers, and students.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F4F6F5",
+  "theme_color": "#0F172A",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
